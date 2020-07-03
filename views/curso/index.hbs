@@ -1,0 +1,30 @@
+<h1>Cursos</h1>
+
+<p>
+    <div class="container">
+        <h3> <a href="/cursos/create"> Crear curso </a></h3>
+        <h1>Lista de Cursos</h1>
+        {{#if cursos }}
+           <table class="table table-hover">
+                <thead>
+                   <tr>
+                       <th>Nombre</th>
+                       <th>Creditos</th>
+                       <th>Nro horas</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    {{# each cursos }}
+                    <tr>
+                        <td> <a href="/cursos/show/{{ _id  }}"> {{ nombre }}  </td>
+                        <td> {{ creditos }} </td>
+                        <td> {{ nro_horas }} </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+           </table>
+        {{~^~}}
+            <div>Cursos no encontrados</div>
+        {{/if}}
+    </div>
+</p>

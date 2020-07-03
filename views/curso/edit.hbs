@@ -1,0 +1,30 @@
+<div class="container">
+    <h3><a href="/cursos">Lista de cursos</a></h3>
+
+    <h1>Editar curso</h1>
+
+    <form action="/cursos/update/{{ curso.id }} " method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" value="{{ curso.nombre }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Creditos</td>
+                    <td><input type="text" name="creditos" value="{{ curso.creditos }}" /> </td>
+                </tr>
+                <tr>
+                    <td>Nro horas</td>
+                    <td><input type="text" name="nro_horas" value="{{ curso.nro_horas }}" /> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" > 
+                        <input type="submit" value="Update" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</div>
